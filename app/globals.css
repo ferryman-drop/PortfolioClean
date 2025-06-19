@@ -4,24 +4,44 @@
 
 @layer base {
   html {
-    font-family: system-ui, sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+    min-height: 100%;
+    transition: background 0.4s;
+  }
+  body {
+    @apply text-gray-900 bg-gradient-to-br from-gray-50 to-blue-50;
+    min-height: 100vh;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+    letter-spacing: -0.01em;
+  }
+  h1 {
+    @apply text-5xl mb-4;
+  }
+  h2 {
+    @apply text-3xl mb-3;
+  }
+  h3 {
+    @apply text-2xl mb-2;
+  }
+  a {
+    @apply transition-colors underline-offset-2 hover:underline;
   }
 }
 
 @layer components {
   .card {
-    @apply bg-white rounded-lg shadow-md p-6 border border-gray-200;
+    @apply bg-white/90 rounded-2xl shadow-xl p-8 border-2 border-gray-200 transition-colors;
   }
-  
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors;
+    @apply bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-2 px-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-200;
   }
-  
   .btn-secondary {
     @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors;
   }
-  
   .input-field {
-    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white text-gray-900 transition-colors;
   }
 } 
