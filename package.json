@@ -2,11 +2,15 @@
   "name": "crypto-portfolio-manager",
   "version": "1.0.0",
   "description": "Advanced crypto portfolio management with automatic rebalancing and analytics",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js",
     "lint": "next lint"
   },
   "dependencies": {
